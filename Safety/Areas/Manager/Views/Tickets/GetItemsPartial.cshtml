@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Safety.Models.Speciality>
+
+<select id="SpecialitysId" name="SpecialitysId" class="form-control">
+    <option disabled="">Сделайте выбор</option>
+    @foreach (var item in Model)
+    {
+        <option value=@item.Id>@item.Name</option>
+    }
+    <option value=0>-Все-</option>
+</select>

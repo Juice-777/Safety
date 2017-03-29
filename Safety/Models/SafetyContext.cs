@@ -14,8 +14,7 @@ namespace Safety.Models
         public DbSet<TypeTest> TypeTests { get; set; }
         public DbSet<Speciality> Specialitys { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<Answer> Answers { get; set; }
+        public DbSet<QuestAndAnsw> QuestAndAnsws { get; set; }
         public DbSet<Result> Results { get; set; }
     }
 }

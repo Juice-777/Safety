@@ -197,25 +197,39 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Manager\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Manager\Controllers\QuestAndAnswsController.cs" />
+    <Compile Include="Areas\Manager\Controllers\SpecialitiesController.cs" />
+    <Compile Include="Areas\Manager\Controllers\TicketsController.cs" />
+    <Compile Include="Areas\Manager\Controllers\TypeTestsController.cs" />
+    <Compile Include="Areas\Manager\ManagerAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703291046419_MigrateDB.cs" />
+    <Compile Include="Migrations\201703291046419_MigrateDB.Designer.cs">
+      <DependentUpon>201703291046419_MigrateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\QuestAndAnsw.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\SafetyContext.cs" />
     <Compile Include="Models\Speciality.cs" />
-    <Compile Include="Models\TestToDel.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\TypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,10 +244,45 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Areas\Manager\Views\web.config" />
+    <Content Include="Areas\Manager\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\TypeTests\Create.cshtml" />
+    <Content Include="Areas\Manager\Views\TypeTests\Delete.cshtml" />
+    <Content Include="Areas\Manager\Views\TypeTests\Details.cshtml" />
+    <Content Include="Areas\Manager\Views\TypeTests\Edit.cshtml" />
+    <Content Include="Areas\Manager\Views\TypeTests\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\Create.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\Delete.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\Details.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\Edit.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\Create.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\Delete.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\Details.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\Edit.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\QuestAndAnsws\Create.cshtml" />
+    <Content Include="Areas\Manager\Views\QuestAndAnsws\Delete.cshtml" />
+    <Content Include="Areas\Manager\Views\QuestAndAnsws\Details.cshtml" />
+    <Content Include="Areas\Manager\Views\QuestAndAnsws\Edit.cshtml" />
+    <Content Include="Areas\Manager\Views\QuestAndAnsws\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\Specialities\SpecialitiesSearch.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\GetItemsPartial.cshtml" />
+    <Content Include="Areas\Manager\Views\Tickets\TicketsSearch.cshtml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -279,6 +328,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Manager\Models\" />
+    <Folder Include="Areas\Manager\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -286,10 +337,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703291046419_MigrateDB.resx">
+      <DependentUpon>201703291046419_MigrateDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

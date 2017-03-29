@@ -1,30 +1,30 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Safety
+namespace Safety.Models
 {
-    public  class Ticket
-    {    
+    public class Ticket
+    {
         public int Id { get; set; }
+        [Required]
+        [Display(Name = "â„– Ğ±Ğ¸Ğ»ĞµÑ‚Ğ°")]
         public int Nomber { get; set; }
 
-        //Êëş÷ äëÿ Ticket
+        //ĞšĞ»ÑÑ‡ Ğ´Ğ»Ñ Speciality
         public int? SpecialityId { get; set; }
         public Speciality Speciality { get; set; }
 
-        //Êëş÷ äëÿ Question
-        public ICollection<Question> Questions { get; set; }
+        //ĞšĞ»ÑÑ‡ Ğ´Ğ»Ñ ResultsĞ°
+        public ICollection<Result> Results { get; set; }
+        //ĞšĞ»ÑÑ‡ Ğ´Ğ»Ñ QuestAndAnsw
+        public ICollection<QuestAndAnsw> QuestAndAnsws { get; set; }
         public Ticket()
         {
-            Questions = new List<Question>();
-            Results = new List<Result>(); //Êëş÷ äëÿ Results
-
+            Results = new List<Result>();
+            QuestAndAnsws = new List<QuestAndAnsw>();
         }
-
-        //Êëş÷ äëÿ Results
-        public ICollection<Result> Results { get; set; }
-
     }
 }

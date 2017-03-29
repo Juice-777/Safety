@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Safety.Models.Speciality>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Все специальности</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<div class="form-group">
+    @using (Ajax.BeginForm("SpecialitiesSearch", new AjaxOptions { UpdateTargetId = "results" }))
+    {
+        <div class="form-inline">
+            <label class="control-label">Тип: </label>
+            @Html.DropDownList("TypeTestsId", ViewBag.TypeTests as SelectList, new { id = "TypeTestsId", @class = "form-control" })
+
+            <input type="submit" value="Фильтр" class="btn btn-default" />
+        </div>
+    }
+</div>
+<div class="form-group">
+    <br />
+    <div id="results">
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeTest.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeTest.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Редакт", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Инфо", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+@section scripts{
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#TypeTestsId').append($('<option>', {
+            value: 0,
+            text: '-Все категории-'
+        }));
+
+        $("#TypeTestsId").val(0);
+    });
+</script>
+}
+

@@ -1,21 +1,24 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Safety
-{
-    
-    public partial class Speciality
+namespace Safety.Models
+{ 
+    public class Speciality
     {    
         public int Id { get; set; }
+        [Required]
+        [Display(Name = "Специальность")]
         public string Name { get; set; }
 
-        //���� ��� TypeTest
+        //Ключ для TypeTest
         public int? TypeTestId { get; set; }
         public TypeTest TypeTest { get; set; }
 
-        //���� ��� Ticket
+        //Ключ для Ticket
         public ICollection<Ticket> Tickets { get; set; }
         public Speciality()
         {

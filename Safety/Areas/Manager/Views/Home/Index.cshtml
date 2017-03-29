@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Область управления</h2>
+
+<div class="list-group">
+    <a href="@Url.RouteUrl(new { controller = "TypeTests", action = "Index", area = "Manager" })" class="list-group-item"><span class="badge">@ViewBag.CountTypeTests</span>
+        <h4 class="list-group-item-heading">Редактор вариантов тестов</h4>
+        <p class="list-group-item-text">Возможность редактировать, добавлять, удалять варианты тестов</p>
+    </a>
+    <a href="@Url.RouteUrl(new { controller = "Specialities", action = "Index", area = "Manager" })" class="list-group-item">
+        <span class="badge">@ViewBag.Specialities</span>
+        <h4 class="list-group-item-heading">Обзор специальностей</h4>
+        <p class="list-group-item-text">Возможность редактировать, добавлять, удалять специальность</p>
+    </a>
+    <a href="@Url.RouteUrl(new { controller = "Tickets", action = "Index", area = "Manager" })" class="list-group-item">
+        <span class="badge">@ViewBag.Tickets/@ViewBag.QuestAndAnsws</span>
+        <h4 class="list-group-item-heading">Билеты</h4>
+        <p class="list-group-item-text">Управление темами и номерами билетов, вопросами и ответами</p>
+    </a>
+
+</div>
+

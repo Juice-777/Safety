@@ -21,16 +21,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Главная страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Информация", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Главная страница", "Index", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("Информация", "About", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("Контакты", "Contact", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("Администрирование", "Index", new { area = "Manager", controller = "Home" })</li>
 
-                    @if (Request.IsAuthenticated && User.IsInRole("user"))
+                    @*@if (Request.IsAuthenticated && User.IsInRole("user"))
                     {
                         <li>@Html.ActionLink("Пройти тест", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Результаты", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Администрирование", "Contact", "Home")</li>
-                    }
+                    }*@
                 </ul>
 
                 @Html.Partial("_LoginPartial")
