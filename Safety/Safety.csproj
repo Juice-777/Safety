@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manager\Controllers\QuestAndAnswsController.cs" />
+    <Compile Include="Areas\Manager\Controllers\ResultsController.cs" />
     <Compile Include="Areas\Manager\Controllers\SpecialitiesController.cs" />
     <Compile Include="Areas\Manager\Controllers\TicketsController.cs" />
     <Compile Include="Areas\Manager\Controllers\TypeTestsController.cs" />
@@ -272,6 +273,11 @@
     <Content Include="Areas\Manager\Views\Tickets\TicketsSearch.cshtml" />
     <Content Include="Views\Testing\Index.cshtml" />
     <Content Include="Views\Testing\SpecialitiesSearch.cshtml" />
+    <Content Include="Areas\Manager\Views\Results\Create.cshtml" />
+    <Content Include="Areas\Manager\Views\Results\Delete.cshtml" />
+    <Content Include="Areas\Manager\Views\Results\Details.cshtml" />
+    <Content Include="Areas\Manager\Views\Results\Edit.cshtml" />
+    <Content Include="Areas\Manager\Views\Results\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

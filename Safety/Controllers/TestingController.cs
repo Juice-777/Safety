@@ -158,6 +158,9 @@ namespace Safety.Controllers
             //Session["questionIndex"] = null;
             //Session["Score"] = null;
 
+            db.Results.Add(result);
+            db.SaveChanges();
+
             return View();
         }
 

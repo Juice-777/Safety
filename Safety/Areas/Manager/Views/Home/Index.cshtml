@@ -3,6 +3,16 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Результаты тестирования</h2>
+
+<div class="list-group">
+    <a href="@Url.RouteUrl(new { controller = "Results", action = "Index", area = "Manager" })" class="list-group-item">
+        <span class="badge">@ViewBag.CountTypeTests</span>
+        <h4 class="list-group-item-heading">Результаты</h4>
+        <p class="list-group-item-text">Отчётность об успехах</p>
+    </a>
+</div>
+
 
 <h2>Управление билетами</h2>
 
@@ -23,14 +33,5 @@
     </a>
 </div>
 
-<h2>Результаты тестирования</h2>
-
-<div class="list-group">
-    <a href="@Url.RouteUrl(new { controller = "TypeTests", action = "Index", area = "Manager" })" class="list-group-item">
-        <span class="badge">@ViewBag.CountTypeTests</span>
-        <h4 class="list-group-item-heading">Редактор вариантов тестов</h4>
-        <p class="list-group-item-text">Возможность редактировать, добавлять, удалять варианты тестов</p>
-    </a>
-</div>
 
 
