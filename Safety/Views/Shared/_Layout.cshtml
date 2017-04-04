@@ -7,6 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <meta name="description" content="Safety testing" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +25,7 @@
                     <li>@Html.ActionLink("Главная страница", "Index", new { area = "", controller = "Home" })</li>
                     <li>@Html.ActionLink("Информация", "About", new { area = "", controller = "Home" })</li>
                     <li>@Html.ActionLink("Контакты", "Contact", new { area = "", controller = "Home" })</li>
+                    <li>@Html.ActionLink("Начать тестирование", "Index", new { area = "", controller = "Testing" })</li>
                     <li>@Html.ActionLink("Администрирование", "Index", new { area = "Manager", controller = "Home" })</li>
 
                     @*@if (Request.IsAuthenticated && User.IsInRole("user"))

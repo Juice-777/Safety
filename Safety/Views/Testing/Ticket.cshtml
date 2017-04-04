@@ -1,0 +1,41 @@
+﻿@model Safety.Models.Ticket
+
+<div>
+    <h2>Начинаем тестирование</h2>
+    <h4>номер билета определен случайно</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Speciality.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Speciality.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nomber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nomber)
+        </dd>
+
+    </dl>
+</div>
+
+
+@using (Html.BeginForm("TestProcess", "Testing", FormMethod.Post))
+{
+    <div>
+        <input type="hidden" value="@Model.Id" name="id" />
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Начать" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<br />
+

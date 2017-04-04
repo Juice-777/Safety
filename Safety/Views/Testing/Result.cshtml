@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Результат</h2>
+<h3>Вы ответили правильно на @ViewBag.Score вопросов из @ViewBag.count</h3>
+<div>
+    @Html.ActionLink("Назад к списку", "Index")
+</div>
+
+

@@ -206,6 +206,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TestingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,6 +270,8 @@
     <Content Include="Areas\Manager\Views\Specialities\SpecialitiesSearch.cshtml" />
     <Content Include="Areas\Manager\Views\Tickets\GetItemsPartial.cshtml" />
     <Content Include="Areas\Manager\Views\Tickets\TicketsSearch.cshtml" />
+    <Content Include="Views\Testing\Index.cshtml" />
+    <Content Include="Views\Testing\SpecialitiesSearch.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -325,6 +328,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Testing\Ticket.cshtml" />
+    <Content Include="Views\Testing\TestProcess.cshtml" />
+    <Content Include="Views\Testing\NoFoundTicket.cshtml" />
+    <Content Include="Views\Testing\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

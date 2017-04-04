@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "NoFoundTicket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color: red">Внимание!</h2>
+<hr />
+<h3>
+    Билет не найден в БД =( <br />
+    За помощью обратитесь к администратору
+</h3>
+<div>
+    @Html.ActionLink("Назад к списку", "Index")
+</div>
+
+
