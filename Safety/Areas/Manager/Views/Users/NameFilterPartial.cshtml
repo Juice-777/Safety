@@ -1,0 +1,13 @@
+﻿<div id="searchresults">
+        <div class="form-group">
+            @using (Ajax.BeginForm("SearchName", new AjaxOptions { UpdateTargetId = "results" }))
+            {
+                <div class="form-inline">
+                    <label class="control-label">Введите фамилию: </label>
+                    @Html.TextBox("SearchName", null, new { id = "SearchName", @class = "form-control" })
+
+                    <input type="submit" value="Поиск" class="btn btn-default" />
+                </div>
+            }
+        </div>
+    </div>

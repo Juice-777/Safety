@@ -24,6 +24,15 @@ namespace Safety.Areas.Manager.Controllers
             var allusers = context.Users.ToList();
             return View(allusers);
         }
+        //AJAX
+        public ActionResult SearchName(string SearchName)
+        {
+            var someusers = context.Users
+                            .Where(x => x.LName == SearchName)
+                            .ToList();
+
+            return PartialView("NamesPartial", someusers);
+        }
         public ActionResult Results(string id)
         {
             var results = db.Results

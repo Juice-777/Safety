@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Safety.Models.ApplicationUser>
+
+<table class="table">
+    <tr>
+        <td>
+            <strong>Имя</strong>
+        </td>
+        <td>
+            <strong>Фамилия</strong>
+        </td>
+        <td>
+            <strong>Email</strong>
+        </td>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.ActionLink("Результаты", "Results", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -275,6 +275,8 @@
     <Content Include="Views\Testing\SpecialitiesSearch.cshtml" />
     <Content Include="Areas\Manager\Views\Users\Index.cshtml" />
     <Content Include="Areas\Manager\Views\Users\Results.cshtml" />
+    <Content Include="Areas\Manager\Views\Users\NameFilterPartial.cshtml" />
+    <Content Include="Areas\Manager\Views\Users\NamesPartial.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
