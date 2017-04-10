@@ -16,7 +16,7 @@
         </h3>
     </div>
     <div class="form-group">
-        @Html.RadioButton("id", 1)
+        @Html.RadioButton("id", 1, new { @checked = true })
         <label for="formGroupExampleInput">1) </label>
         @Html.DisplayFor(modelItem => modelItem.Answer1)
     </div>

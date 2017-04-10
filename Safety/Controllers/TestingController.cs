@@ -153,8 +153,11 @@ namespace Safety.Controllers
             result.SpecialityId = db.Tickets
                                     .Where(x => x.Id == ticketId)
                                     .Select(x => x.SpecialityId).FirstOrDefault() ?? 0;
+            result.MaxScore = count;
 
-            //Session["ticket"] = null;
+            //Удалить все сессии
+            Session.RemoveAll();
+            //["ticket"] = null;
             //Session["questionIndex"] = null;
             //Session["Score"] = null;
 

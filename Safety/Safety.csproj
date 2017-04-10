@@ -199,10 +199,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Manager\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manager\Controllers\QuestAndAnswsController.cs" />
-    <Compile Include="Areas\Manager\Controllers\ResultsController.cs" />
     <Compile Include="Areas\Manager\Controllers\SpecialitiesController.cs" />
     <Compile Include="Areas\Manager\Controllers\TicketsController.cs" />
     <Compile Include="Areas\Manager\Controllers\TypeTestsController.cs" />
+    <Compile Include="Areas\Manager\Controllers\UsersController.cs" />
     <Compile Include="Areas\Manager\ManagerAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -211,9 +211,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703291046419_MigrateDB.cs" />
-    <Compile Include="Migrations\201703291046419_MigrateDB.Designer.cs">
-      <DependentUpon>201703291046419_MigrateDB.cs</DependentUpon>
+    <Compile Include="Migrations\201704101204475_MigrateDB.cs" />
+    <Compile Include="Migrations\201704101204475_MigrateDB.Designer.cs">
+      <DependentUpon>201704101204475_MigrateDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -273,11 +273,8 @@
     <Content Include="Areas\Manager\Views\Tickets\TicketsSearch.cshtml" />
     <Content Include="Views\Testing\Index.cshtml" />
     <Content Include="Views\Testing\SpecialitiesSearch.cshtml" />
-    <Content Include="Areas\Manager\Views\Results\Create.cshtml" />
-    <Content Include="Areas\Manager\Views\Results\Delete.cshtml" />
-    <Content Include="Areas\Manager\Views\Results\Details.cshtml" />
-    <Content Include="Areas\Manager\Views\Results\Edit.cshtml" />
-    <Content Include="Areas\Manager\Views\Results\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Manager\Views\Users\Results.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -355,8 +352,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703291046419_MigrateDB.resx">
-      <DependentUpon>201703291046419_MigrateDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704101204475_MigrateDB.resx">
+      <DependentUpon>201704101204475_MigrateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

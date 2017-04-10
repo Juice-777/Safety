@@ -18,11 +18,15 @@ namespace Safety.Models
         public int? TypeTestId { get; set; }
         public TypeTest TypeTest { get; set; }
 
+        //Ключ для Result
+        public ICollection<Result> Results { get; set; }
+
         //Ключ для Ticket
         public ICollection<Ticket> Tickets { get; set; }
         public Speciality()
         {
             Tickets = new List<Ticket>();
+            Results = new List<Result>();
         }
     }
 }

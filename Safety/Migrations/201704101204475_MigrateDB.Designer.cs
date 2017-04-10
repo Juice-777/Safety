@@ -13,7 +13,7 @@ namespace Safety.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703291046419_MigrateDB"; }
+            get { return "201704101204475_MigrateDB"; }
         }
         
         string IMigrationMetadata.Source

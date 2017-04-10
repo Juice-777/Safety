@@ -13,6 +13,8 @@ namespace Safety.Areas.Manager.Controllers
         // GET: Manager/Home
         public ActionResult Index()
         {
+            var Result = db.Results.Count();
+            ViewBag.Result = Result;
             var typeTests = db.TypeTests.Count();
             ViewBag.CountTypeTests = typeTests;
             var specialities = db.Specialitys.Count();
