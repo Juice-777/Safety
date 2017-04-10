@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Область администрирования пользователями</h2>
+
+    <div class="list-group">
+        <a href="@Url.RouteUrl(new { controller = "Roles", action = "Index", area = "Admin" })" class="list-group-item">
+            <span class="badge">@ViewBag.Roles</span>
+            <h4 class="list-group-item-heading">Роли</h4>
+            <p class="list-group-item-text">Редактор ролей приложения</p>
+        </a>
+        <a href="@Url.RouteUrl(new { controller = "Users", action = "Index", area = "Admin" })" class="list-group-item">
+            <span class="badge">@ViewBag.Users</span>
+            <h4 class="list-group-item-heading">Пользователи</h4>
+            <p class="list-group-item-text">Управление зарегистрированными пользователями</p>
+        </a>
+    </div>
+
+    <div>
+        @Html.ActionLink("Go to Roles", "Index", "Roles")
+    </div>
+    <div>
+        @Html.ActionLink("Go to Users", "Index", "Users")
+    </div>
+</div>
